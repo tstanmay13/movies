@@ -5,25 +5,31 @@
     --dark: #4717f6;
 }
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  color: #e7dfdd;
+
 }
 
 .light{
     color: var(--light);
 }
 
+.white{
+    color: #e7dfdd;
+}
+
 html {
   scroll-behavior: smooth;
-  background-color: #0e0b16;
+  background-color: #e7dfdd;
 }
 
 li {
   list-style-type: none;
+  
 }
 
 a {
@@ -35,7 +41,7 @@ a {
 }
 
 .link__hover-effect--white:after {
-    background-color: #e7dfdd;
+  background-color: #e7dfdd;
 }
 
 .link__hover-effect--light:after {
@@ -76,7 +82,22 @@ cursor: pointer;
     margin: 0 auto;
 }
 
-/* NAV */
+.container{
+    margin: 40px 0px;
+    background-color: #e7dfdd;
+}
+/* 
+
+
+NAV 
+
+
+*/
+
+#landing{
+    background-color: #0e0b16;
+    color: #e7dfdd;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -84,7 +105,8 @@ nav {
   margin: 0 auto;
   height: 100px;
   padding: 0px 12px;
-  margin-bottom: 48px;
+  margin-bottom: 28px;
+  
 }
 
 .logo {
@@ -126,33 +148,27 @@ nav {
     border-radius: 9999px;
     padding:8px 24px;
     border: none;
+    color: #e7dfdd;
 }
-/* LANDING */
 
-#landing{
-    min-height: 100vh;
-}
-.header__container{
+/* 
+
+BROWSE 
+
+*/
+
+.browse{
+    max-width:700px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    max-width: 800px;
+    justify-content: center;
     margin: 0 auto;
 }
-
-
 h1{
-    font-size: 72px;
     text-align: center;
-    text-transform: capitalize;
-    margin-bottom: 24px;
-}
-
-h2{
-    font-size: 26px;
-    letter-spacing: 3;
-    margin-bottom: 144px;
+    margin-bottom: 36px;
+    font-size: 36px;
 }
 
 .input{
@@ -161,10 +177,11 @@ h2{
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+    position: relative;
 }
 
 .input__box{
-    width: 80%;
+    width: 100%;
     margin-right: 28px;
     padding: 20px;
     border-radius: 9999px;
@@ -186,27 +203,32 @@ h2{
     border: 3px solid var(--light);
 }
 
-.search{
-    width: 20%;
-    padding: 20px 0px;
-    border-radius: 9999px;
-    background-color: #e7dfdd;
-    outline: none;
-    border: none;
-    transition: all 200ms ease;
-    
-}
-
 .fa-magnifying-glass{
+    position: absolute;
     color: var(--light);
     font-size: 24px;
+    right: 60px;
 }
 
-.search:hover .fa-magnifying-glass{
-    color: #e7dfdd;
+
+/* SEARCH */
+
+.search__bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.search:hover{
-    background-color: var(--light);
+.search__tag{
+    font-size: 24px;
+
 }
 
+.years__container{
+    width: 30%;
+    min-width: 335px;
+}
+
+.search__years{
+    text-align: center;
+}

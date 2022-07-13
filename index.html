@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script src="./app.js" defer></script>
-</head>
-<body>
-    Tanmay Singh
-</body>
+    <script
+      src="https://kit.fontawesome.com/10a73d7bfa.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="landing">
+        <nav>    
+            <div class="logo">
+                <span class="logo__title">FindIt</span>
+                <figure class="logo__image--wrapper">
+                    <img src="./assets/popcorn.png" alt="" class="logo__image">
+                </figure>
+            </div>
+            <ul class="nav__links">
+                <li class="nav__link click">
+                   <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--light"> <span class="light">Home</span></a>
+                </li>
+                <li class="nav__link click">
+                    <a href="./movies.html" class="nav__link--anchor link__hover-effect link__hover-effect--white"> Movies </a>
+                 </li>
+                 <li class="nav__link">
+                    <button class="nav__link--anchor contact_btn click">Contact</button>
+                 </li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="row">
+                <div class="header__container">
+                    <h1>America's fastest movie searching platform</h1>
+                    <h2><span class="light">Find any movie you want with</span> FindIt</h2>
+        
+                    <div class="input">
+                        <input class="input__box" type="text" placeholder="Search by title"> 
+                        <button class="search"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+                    </div>
+                    <figure class="header__image--wrapper">
+                        <img src="./assets/undraw_horror_movie_3988.svg" alt="" class="header__image">
+                    </figure>
+                </div class="header__container">
+            </div>
+        </header>
+    </section>
+
+  </body>
 </html>
