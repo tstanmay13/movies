@@ -12,6 +12,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+.inline{
+  display: inline;
+}
+
 .light {
   color: var(--light);
 }
