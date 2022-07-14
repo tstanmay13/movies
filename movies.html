@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="./movies.css" />
   <link rel="stylesheet" href="./slider.css" />
   <script src="./movies.js" defer></script>
-  <script src="./slider.js" defer></script>
   <script src="https://kit.fontawesome.com/10a73d7bfa.js" crossorigin="anonymous"></script>
 
 
@@ -53,7 +52,7 @@
     <div class="container">
       <div class="row">
         <div class="search__bar">
-          <h3 class="search__tag">Search results for</h3>
+          <h3 class="search__tag">Search results for <span class="search__result"></span></h3>
           <div class="years__container">
             <h4 class="search__years"></h4>
             <div class="wrapper">
@@ -69,8 +68,8 @@
               </div>
               <div class="slider__container">
                 <div class="slider-track"></div>
-                <input type="range" min="1600" max="2022" value="1600" id="slider-1" oninput="slideOne()">
-                <input type="range" min="1600" max="2022" value="2022" id="slider-2" oninput="slideTwo()">
+                <input type="range" min="1600" max="2022" value="1600" id="slider-1" oninput="slideOne()" onmouseup="readjust(event)">
+                <input type="range" min="1600" max="2022" value="2022" id="slider-2" oninput="slideTwo()" onmouseup="readjust(event)">
               </div>
             </div>
           </div>
