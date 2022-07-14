@@ -31,7 +31,7 @@ async function renderResults(search_key, y1 = 1600, y2 = 2022) {
     }
   }
 
-
+  document.querySelector('.spinner').classList.remove("movies__loading");
   
   
 
