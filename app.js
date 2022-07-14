@@ -16,3 +16,7 @@ function search(){
     // console.log(window);
     window.location.href = `${window.location.origin}/movies.html`
 }
+
+function gohome(){
+    window.location.href = `${window.location.origin}/index.html`
+}
