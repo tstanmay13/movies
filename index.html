@@ -41,8 +41,8 @@
                     <h2><span class="light">Find any movie you want with</span> FindIt</h2>
         
                     <div class="input">
-                        <input class="input__box" type="text" placeholder="Search by title"> 
-                        <button class="search"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+                        <input id="input__box" type="text" placeholder="Search by title" onkeydown="searchAgain(event)"> 
+                        <button class="search" onclick="search()"> <i class="fa-solid fa-magnifying-glass"></i> </button>
                     </div>
                     <figure class="header__image--wrapper">
                         <img src="./assets/undraw_horror_movie_3988.svg" alt="" class="header__image">
