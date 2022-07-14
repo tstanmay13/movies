@@ -6,6 +6,11 @@ const maxCounter = 12;
 
 async function renderResults(search_key, y1 = 1600, y2 = 2022) {
   let counter = 0;
+
+  document.querySelector('.spinner').classList += " movies__loading";
+    setTimeout(() => {
+    }, 1000);
+  const htmlAdd = ``;
   for (let i = y2; i >= y1; --i) {
     if (counter < maxCounter) {
       console.log();
@@ -13,25 +18,30 @@ async function renderResults(search_key, y1 = 1600, y2 = 2022) {
         `https://www.omdbapi.com/?apikey=93f3f842&s=${search_key}&y=${i}`
       );
       const resultData = await results.json();
+      
       if (resultData.Response == "True") {
         // console.log("true")
         counter += Object.keys(resultData.Search).length;
         // console.log(counter);
+        document.querySelector('.spinner').classList.remove("movies__loading");
         resultsListEl.innerHTML += resultData.Search.map((result) =>
           getResultHTML(result)
         ).join("");
       }
     }
   }
+
+
+  
+  
+
   searchEl.innerHTML = `<div class="light inline" > "${search_key}"</div>`;
-//   counter = 0;
   changenPlaceholder(search_key);
 }
 renderResults(key);
 
 function changenPlaceholder(placeholder) {
   document.querySelector(".input__box2").placeholder = placeholder;
-//   console.log(document.querySelector(".input__box2").placeholder);
 }
 
 async function searchAgain(event) {
@@ -92,7 +102,6 @@ function readjust() {
     sliderOne.value,
     sliderTwo.value
   );
-
   resultsListEl.innerHTML = ""
 }
 

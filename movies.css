@@ -78,6 +78,7 @@ a {
 }
 
 .row {
+  position: relative;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -310,4 +311,41 @@ RESULTS
 
 .result__imdb {
   font-size: 12px;
+}
+
+
+/* SPINNER */
+
+.spinner{
+  opacity: 0;
+  visibility: none;
+}
+
+.fa-spinner {
+  font-size: 128px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  color: var(--light);
+  animation: spin 700ms infinite linear;
+
+}
+
+.movies__loading{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  95% {
+      opacity: 1;
+  }
+  100% {
+      transform: rotate(360deg);
+  }
 }
