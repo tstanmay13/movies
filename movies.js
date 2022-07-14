@@ -4,9 +4,11 @@ const key = localStorage.getItem("key");
 const searchEl = document.querySelector(".search__result");
 const maxCounter = 12;
 
-async function renderResults(search_key, y1 = 1600, y2 = 2022) {
+async function renderResults(search_key, y1 = 1945, y2 = 2022) {
+  resultsListEl.innerHTML = "";
   let counter = 0;
 
+  searchEl.innerHTML = `<div class="light inline" > "${search_key}"</div>`;
   document.querySelector('.spinner').classList += " movies__loading";
     setTimeout(() => {
     }, 1000);
@@ -35,10 +37,14 @@ async function renderResults(search_key, y1 = 1600, y2 = 2022) {
   
   
 
-  searchEl.innerHTML = `<div class="light inline" > "${search_key}"</div>`;
   changenPlaceholder(search_key);
 }
 renderResults(key);
+
+
+function gohome(){
+  window.location.href = `${window.location.origin}/index.html`
+}
 
 function changenPlaceholder(placeholder) {
   document.querySelector(".input__box2").placeholder = placeholder;
@@ -97,6 +103,7 @@ function slideOne() {
 }
 
 function readjust() {
+  console.log("readjusting here")
   renderResults(
     document.querySelector(".input__box2").placeholder,
     sliderOne.value,
